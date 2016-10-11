@@ -169,7 +169,7 @@ var roleSpawn = {
            spawn = Game.spawns[_.findKey(Game.spawns)];
         }
 
-        console.log(ceil(creep.memory.costs/2.5/_.size(creep.body)));
+        console.log(_.ceil(creep.memory.costs/2.5/_.size(creep.body)), creep.memory.costs, _.size(creep.body));
         
         targetTicksToLive += creep.memory.renewCount > 0 ? creep.memory.renewCount : 1;
         var creepLink = _.template('<a href="#!/creep/<%= name %>"><%= name %></a>');
