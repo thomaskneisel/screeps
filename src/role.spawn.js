@@ -144,7 +144,7 @@ var roleSpawn = {
             console.log('created:' + result);
         } else {
             
-            console.log('canÂ´t create, check values!', result, '<a href="#!/room/' + spawn.room.name + '">' + spawn.room.name + '</a>');
+            console.log('can\'t create, check values!', result, '<a href="#!/room/' + spawn.room.name + '">' + spawn.room.name + '</a>');
             /*
             console.log('body: ', body);
             console.log('name: ' + name);
