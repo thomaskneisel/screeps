@@ -1,2 +1,2 @@
-# screeps
-Screep Game Files
+# Screeps
+[Screep](http://screeps.com) Game Files
