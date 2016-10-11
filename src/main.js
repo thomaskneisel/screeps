@@ -1,5 +1,6 @@
-var prototypCreep = require('prototype.creep');
+//require('prototype.console').register();
 
+var prototypCreep = require('prototype.creep');
 var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
 var roleBuilder = require('role.builder');

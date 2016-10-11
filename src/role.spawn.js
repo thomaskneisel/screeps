@@ -73,14 +73,27 @@ var roleSpawn = {
     check: function() {
         var creeps = _.groupBy(Game.creeps, (creep) => creep.memory.origin)
         
+        var styles = 
+        '<style>'+
+            '@keyframes OK { from {background-color: green; color: white; } to {background-color: lightgreen; color: black;} }' +
+            '@keyframes BUILD { from {background-color: yellow; color: black;} to {background-color: red; color: white } }' +
+            '.ok { color: white; background-color: green; animation: OK 3s ease 1s infinite alternate; }' +
+            '.build { animation: BUILD 2s ease-out 0s infinite alternate;}' +
+            '.btn { padding: 2px 4px; }' +
+        '</style>';
+        
         for(var cr in devBuilds) {
             var build = devBuilds[cr];
             var elements = creeps[build.memory.role];
             if (elements.length < build.count) {
-                console.log('CREATE', build.name, build.count, 'of', elements.length);
-                this.create(cr);
+                if (this.create(cr) == OK) {
+                    console.log(styles, '<span class="ok btn btn-xs">OK</span>', build.name, build.count, 'of', elements.length);
+                } else {
+                    console.log(styles, '<span class="build btn-xs">CAN NOT CREATE</span>', build.name, build.count, 'of', elements.length);
+                }
+                
             } else {
-                console.log('<span style="color: lightgreen;">OK</span>', build.name, build.count, 'of', elements.length);
+                console.log(styles, '<span class="ok btn btn-xs">OK</span>', build.name, build.count, 'of', elements.length);
             }
             
             if (!build.costs) {
@@ -131,7 +144,7 @@ var roleSpawn = {
             console.log('created:' + result);
         } else {
             
-            console.log('can´t create, check values!', result, '<a href="#!/room/' + spawn.room.name + '">' + spawn.room.name + '</a>');
+            console.log('canÂ´t create, check values!', result, '<a href="#!/room/' + spawn.room.name + '">' + spawn.room.name + '</a>');
             /*
             console.log('body: ', body);
             console.log('name: ' + name);
@@ -156,10 +169,39 @@ var roleSpawn = {
            spawn = Game.spawns[_.findKey(Game.spawns)];
         }
         
-        targetTicksToLive += creep.memory.renewCount ? creep.memory.renewCount : 1;
-        
+        targetTicksToLive += creep.memory.renewCount > 0 ? creep.memory.renewCount : 1;
         var creepLink = _.template('<a href="#!/creep/<%= name %>"><%= name %></a>');
-        console.log('renew:', creepLink(creep), ' - ticks:', creep.ticksToLive, ' - targetTicks:', targetTicksToLive);
+        var panel = _.template(
+            '<div class="panel panel-default panel-${ type }">'+
+                '<div class="panel-heading">'+
+                    '<h3 class="panel-title">${ title }</h3>'+
+                '</div>'+
+                '<div class="panel-body">${ message }</div>'+
+            '</div>'
+        );
+        var progress = _.template(
+        '<div class="progress" style="width: 100%; float: left;">' +
+            '<div class="progress-bar progress-bar-info progress-bar-striped" style="width: ${ percent }%; min-width: 4em;" role="progressbar" aria-valuenow="${ value }" aria-valuemin="${ min }" aria-valuemax="${ max }" >'+
+                '${ value } / ${ max }'+
+            '</div>'+
+        '</div>'
+        );
+        
+        var percent = Math.floor(creep.ticksToLive / (targetTicksToLive/100));
+        
+        console.log(
+            panel({
+                type: 'info', 
+                title: 'Renewing ' + creep.name, 
+                message: 
+                    '<style> table td { border: 1px solid red; }</style><table>'+
+                        '<tr><td><strong>Ticks</strong></td><td>' + creep.ticksToLive + '</td></tr>'+
+                        '<tr><td><strong>TargetTicks</strong></td><td>' + targetTicksToLive + '</td></tr>'+
+                    '</table>'+ 
+                    progress({value: creep.ticksToLive, percent: percent, min:0, max: targetTicksToLive})})
+        );
+        
+        //console.log('<span style="background-color: blue;" class="btn">renew</span>:', creepLink(creep), ' - ticks:', creep.ticksToLive, ' - targetTicks:', targetTicksToLive);
         
         var renewd = spawn.renewCreep(creep);
         var unload = creep.transfer(spawn, RESOURCE_ENERGY);

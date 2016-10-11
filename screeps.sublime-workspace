@@ -1,0 +1,531 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"inventorys"
+			],
+			[
+				"remo",
+				"removeItem"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"on_",
+				"on_gui_click"
+			],
+			[
+				"be",
+				"beltNumber"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"BB",
+				"BB_glob_amount"
+			],
+			[
+				"play",
+				"player"
+			],
+			[
+				"ev",
+				"event"
+			],
+			[
+				"ea",
+				"east"
+			],
+			[
+				"di",
+				"directionMap"
+			],
+			[
+				"no",
+				"north"
+			],
+			[
+				"de",
+				"direction"
+			],
+			[
+				"Chec",
+				"BB_CHECKBOX_COUNT"
+			],
+			[
+				"en",
+				"entity"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"lay",
+				"layerTwo"
+			],
+			[
+				"player_",
+				"player_index"
+			],
+			[
+				"BB_",
+				"BB_var_1"
+			],
+			[
+				"e",
+				"extend"
+			],
+			[
+				"ico",
+				"icon"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"COLORS",
+				"COLORED_LAMPS"
+			],
+			[
+				"colo",
+				"colored-lamp"
+			],
+			[
+				"wo",
+				"world"
+			],
+			[
+				"f",
+				"foo"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/role.builder.js",
+			"settings":
+			{
+				"buffer_size": 2020,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main.js",
+			"settings":
+			{
+				"buffer_size": 2076,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.5/control.lua",
+		"/C/Users/Geisel/Downloads/TK Lebenslauf (1).pdf",
+		"/C/Users/Geisel/.gitconfig",
+		"/C/Users/Geisel/AppData/Local/Screeps/scripts/screeps.com/.sync",
+		"/C/Users/Geisel/AppData/Local/Screeps/scripts/screeps.com/tutorial-4/main.js",
+		"/C/Users/Geisel/AppData/Local/Screeps/scripts/screeps.com/world-master/role.spawn.js",
+		"/D/Spiele/Steam/steamapps/common/Screeps/locales/en-US.pak",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.2/control.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.2/config.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/demo-entities.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/entities.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/item/demo-item.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/item/item.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.5/info.json",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.2/info.json",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/FARL.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.2/data.lua",
+		"/C/Users/Geisel/AppData/Local/Temp/Rar$DR00.562/easybelt_0.1.2/control.lua",
+		"/C/Users/Geisel/AppData/Local/Temp/Rar$DR00.829/easybelt_0.1.2/control.lua",
+		"/C/Users/Geisel/Downloads/easybelt_0.1.2.zip",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.2/data-final-fixes.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.2/e.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.2/data-updates.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/data-updates.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/core/lualib/defines.lua",
+		"/C/Users/Geisel/AppData/Local/Temp/Rar$DR00.664/ItemCount_0.0.1/control.lua",
+		"/C/Users/Geisel/AppData/Local/Temp/Rar$DR01.303/FARL_0.5.17/control.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/color-coding_1.0.7/prototypes/entities.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/demo-doodads.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/autoplace-controls.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ItemCount_0.0.1.zip",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/FARL_0.5.17.zip",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/color-coding_1.0.7/prototypes/config.lua",
+		"/C/Users/Geisel/AppData/Local/Temp/Rar$DR11.177/BeltBrush_0.0.2/control.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/blueprint_flipper_0.1.0/control.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/prototypes/entity.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/colors.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/config.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/mod-list.json",
+		"/C/Users/Geisel/AppData/Local/Temp/Rar$DR00.276/upgrade-planner_1.1.9/prototypes/item.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/prototypes/item-group.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/data.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/prototypes/item.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/prototypes/recipe.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/lib.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/Concrete_Lamppost_0.1.0/control.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/Concrete_Lamppost_0.1.0/lamppost.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/transport-belt-pictures.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/Diesel_Generator_0.3.0/prototype/diesel-generator.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/Diesel_Generator_0.3.0/control.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/color-coding_1.0.7/prototypes/items.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/BeltBrush_0.0.1/control.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/Diesel_Generator_0.3.0/data.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/Concrete_Lamppost_0.1.0/data.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/core/lualib/util.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/core/backers.json",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/signal/demo-signal.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/signal/signal.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/data.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/scenarios/freeplay/control.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/migrations/2015-07-02_Factorio_0.12.0.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/migrations/2015-11-14_Factorio_0.12.11.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/migrations/2016-03-05_Factorio_0.12.26.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/prototypes/technology.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/README.md",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/lib.lua",
+		"/C/Users/Geisel/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/data-updates.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/beams.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/demo-railpictures.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/enemies.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/resources.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/prototypes/entity/farl_player.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/prototypes/entity/entities.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/prototypes/item/item.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/entity/projectiles.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/info.json",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/YARM_0.7.15/prototypes/prototypes.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/YARM_0.7.15/info.json",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/data-final-fixes.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/recipe/demo-recipe.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/equipment/equipment.lua",
+		"/D/Spiele/Steam/SteamApps/common/Factorio/data/base/prototypes/technology/technology.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/DefaultRequestAmount_1.0.1/info.json",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/DefaultRequestAmount_1.0.1/data-updates.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/YARM_0.7.15/libs/array_pair.lua",
+		"/C/Users/Geisel/AppData/Local/Temp/Rar$DR55.427/YARM_0.7.15/resmon.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/DefaultRequestAmount_1.0.0/info.json",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/DefaultRequestAmount_1.0.0/data-updates.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/DefaultRequestAmount_1.0.0.zip",
+		"/C/Users/Geisel/AppData/Local/Temp/Rar$DR53.006/YARM_0.7.15/control.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/locale/de/locale.cfg",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/control.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/data.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/data-final-fixes.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/control.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/migrations/2015-02-18_FARL_0.1.8.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/Settings.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/migrate.lua",
+		"/C/Users/Geisel/Downloads/FARL_0.5.17/FARL_0.5.17/prototypes/recipe/recipe.lua",
+		"/D/Spiele/Steam/steamapps/common/Factorio/data/base/prototypes/item/item.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/ColoredLamps_0.0.1/locale/en/locale.cfg",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/EvoGUI_0.4.12/data.lua",
+		"/D/Spiele/Steam/steamapps/common/Factorio/data/base/prototypes/item/equipment.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/EvoGUI_0.4.12/locale/de/locale.cfg",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/script-output/blueprints/defaultBook.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/script-output/blueprints/defaultBookPreSave.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/script-output/blueprints/4LaneLoadBalancer.blueprint",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/EvoGUI_0.4.12/prototypes/styles.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/EvoGUI_0.4.12/evoGUI.lua",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/evoGUI-0.4.12/locale/de/locale.cfg",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/EvoGUI_0.4.12/VERSION",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/EvoGUI_0.4.12/info.json",
+		"/D/Spiele/Steam/steamapps/common/Factorio/config-path.cfg",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/WaiTex_1.0.0/info.json",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/evoGUI-0.4.12/VERSION",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/evoGUI-0.4.12/info.json",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/evoGUI-0.4.12/Makefile",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/mods/evoGUI-0.4.12/README.md",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/config/config.ini",
+		"/C/Users/Geisel/AppData/Roaming/Factorio/player-data.json"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\Geisel\\Downloads\\FARL_0.5.17\\FARL_0.5.17",
+			"D:\\Spiele\\Steam\\SteamApps\\common\\Factorio\\data\\",
+			"D:\\Spiele\\Steam\\SteamApps\\common\\Factorio\\data\\base\\prototypes",
+			"C:\\Users\\Geisel\\Downloads\\FARL_0.5.17\\YARM_0.7.15",
+			"C:\\Users\\Geisel\\Downloads\\FARL_0.5.17\\FARL_0.5.17",
+			"D:\\Spiele\\Steam\\SteamApps\\common\\Factorio\\data\\base\\prototypes",
+			"C:\\Users\\Geisel\\AppData\\Roaming\\Factorio\\mods\\EvoGUI_0.4.12"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"@",
+			"thomas.knei",
+			" pl",
+			"Text",
+			"text",
+			".a",
+			".add",
+			".gui.",
+			"stone-path",
+			"stone-pa",
+			"stone",
+			"stone-",
+			"stone-pa",
+			"place_as_tile",
+			"\"],\n",
+			"express-",
+			"stone-path",
+			"stone_path",
+			"stone",
+			"conrete",
+			"prin",
+			"text",
+			"\n				",
+			"local",
+			"init_player",
+			"on_player_created",
+			"surfa",
+			"game.players[i]",
+			"for i in ipairs(game.players) do",
+			"BB_glob_amount[PI]",
+			"\"\n",
+			"\"small-lamp\"",
+			"express-transport-belt",
+			"trans",
+			"players[1]",
+			"player[1]",
+			"rolling_stock_back_light",
+			"inser",
+			"picture_on",
+			"small-lamp",
+			"small-l",
+			"type = \"inserter\"",
+			"p.",
+			"p",
+			"newLamp",
+			"blue",
+			"theirLamp",
+			"{r=",
+			"green",
+			"},\n",
+			"green_light",
+			"smart",
+			"data.raw",
+			"pairs(data.raw)",
+			"data.",
+			"data.raw",
+			"optics",
+			"data-updates",
+			"small-lamp",
+			"light = {",
+			"lamp",
+			"{{VRESION}}",
+			"{{MOD_NAME}}"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"player",
+			"BB_glob_amount",
+			"players[player_index]",
+			"player[player_index]",
+			"newPrototype.",
+			"newPrototype",
+			"copy",
+			"newLampItem",
+			"newLamp",
+			"EvoGUI"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/role.builder.js",
+					"settings":
+					{
+						"buffer_size": 2020,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "src/main.js",
+					"settings":
+					{
+						"buffer_size": 2076,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

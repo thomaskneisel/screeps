@@ -72,7 +72,7 @@ var roleInvader = {
 	            
 	            if (!creep.memory.path) {
 	                creep.memory.path = creep.pos.findPathTo(flag);
-	                console.log('Wehtehäff?!');
+	                console.log('WehtehÃ¤ff?!');
 	            }
 	        }
 	    } else {
