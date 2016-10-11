@@ -8,7 +8,7 @@ Creep.prototype.getRole = function() {
     return this.memory.role 
 }
 
-Creep.prototye.setRole = function(role) {
+Creep.prototype.setRole = function(role) {
     this.memory.role = role;
 }
 
