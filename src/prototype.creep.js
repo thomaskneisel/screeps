@@ -6,7 +6,11 @@ Creep.prototype.sayDelay = function(text, ticks) {
 
 Creep.prototype.getRole = function() { 
     return this.memory.role 
-};
+}
+
+Creep.prototye.setRole = function(role) {
+    this.memory.role = role;
+}
 
 Creep.prototype.resetRole = function() {
     this.memory.role = this.memory.origin;
