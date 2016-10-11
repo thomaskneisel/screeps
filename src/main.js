@@ -7,7 +7,7 @@ var roleRecycler = require('role.recycle');
 var roleInvader = require('role.invader');
 var roleSpawn = require('role.spawn');
 
-var checkEveryTick = 5;
+var checkEveryTick = 7;
 
 module.exports.loop = function () {
     
