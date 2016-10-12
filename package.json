@@ -1,0 +1,26 @@
+{
+  "name": "screeps",
+  "version": "1.0.0",
+  "description": "screep game files",
+  "dependencies": {
+    "screepsAutocomplete": "git+https://github.com/thomaskneisel/ScreepsAutocomplete.git#nodeify"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomaskneisel/screeps.git"
+  },
+  "keywords": [
+    "game",
+    "screeps"
+  ],
+  "author": "thomasKneisel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomaskneisel/screeps/issues"
+  },
+  "homepage": "https://github.com/thomaskneisel/screeps#readme"
+}

@@ -11,3 +11,7 @@ renewLowest = function() {
 get = function(name) {
     return Game.creeps[name] || Game.spawns[name] || Game.rooms[name];
 }
+
+resetAll = function() {
+    _(Game.creeps).every((creep) => creep.resetRole());
+}
