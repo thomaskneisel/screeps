@@ -15,11 +15,14 @@ globalSpawn = roleSpawn;
 module.exports.loop = function () {
 
     if(Game.spawns['Homebase'].energy == 0) {
-        console.log('Notified me ;) -> ',
+        console.log(
+            'Notified me ;) -> ',
             Game.notify(
                 'Homebase is out of energy',
                 5  // group these notifications for 1 minute
-        ));
+            ),
+            Game.notify('Some other message', 5)
+        );
     }
 
     var tower = Game.getObjectById('57fc14fdba828cf03db240c3');
