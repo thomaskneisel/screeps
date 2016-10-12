@@ -208,23 +208,20 @@ var roleSpawn = {
 
         //console.log('<span style="background-color: blue;" class="btn">renew</span>:', creepLink(creep), ' - ticks:', creep.ticksToLive, ' - targetTicks:', targetTicksToLive);
 
-        var renewd = spawn.renewCreep(creep);
-        var unload = creep.transfer(spawn, RESOURCE_ENERGY);
-
         if (!creep.memory.renew) {
             creep.memory.renew = {
                 count: creep.memory.renewcount || 0,
                 hits: creep.memory.renewHits || 0,
                 costs: creep.memory.renewCosts || 0,
                 average: [
-                    creep.memory.costs / CREEP_LIFE_TIME
+                    creep.memory.costs / CREEP_LIFE_TIME,
+                    0
                 ]
             }
-            var renew = creep.memory.renew;
-            renew.average.push( renew.costs / renew.hits);
-
-            console.log(creep.memory.renew.average);
         }
+
+        var renewd = spawn.renewCreep(creep);
+        var unload = creep.transfer(spawn, RESOURCE_ENERGY);
 
         if (renewd == ERR_NOT_IN_RANGE) {
             creep.sayDelay('renewing', 5);
@@ -238,8 +235,7 @@ var roleSpawn = {
             creep.memory.renew.costs += renewCosts;
             creep.memory.renew.hits += renewHits;
 
-            creep.memory.renew.average.push(renewCosts / renewHits);
-
+            creep.memory.renew.average[1] = renewCosts / renewHits;
             if (creep.ticksToLive > targetTicksToLive || creep.ticksToLive > targetTicksToLive) {
                 creep.memory.renew.count++;
                 creep.memory.role = creep.memory.origin;
