@@ -67,16 +67,17 @@ var roleInvader = {
                 delete creep.memory.path;
                 creep.say('da bin ich');
             } else {
+                if (creep.fatigue > 0) {
+                    creep.say('shit :/');
+                }
                 var moved = creep.moveByPath(creep.memory.path);
-
                 if(moved == ERR_NOT_FOUND || moved == ERR_INVALID_ARGS) {
+                    flag.setColor(COLOR_RED);
                     creep.memory.path = creep.pos.findPathTo(flag);
                     creep.say('newPath');
-                    flag.setColor(COLOR_RED);
                 } else {
                     flag.setColor(COLOR_YELLOW);
                     creep.say('toFlag');
-                    creep.say(creep.fatigue);
                 }
 
                 if (!creep.memory.path) {
