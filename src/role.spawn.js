@@ -220,6 +220,11 @@ var roleSpawn = {
             }
         }
 
+        if (creep.memory.renew.costs > creep.memory.costs) {
+            creep.memory.role = 'recycle';
+            return false;
+        }
+
         var renewd = spawn.renewCreep(creep);
         var unload = creep.transfer(spawn, RESOURCE_ENERGY);
 
