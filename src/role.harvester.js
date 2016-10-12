@@ -1,25 +1,25 @@
 var roleHarvester = {
-    
+
     count: 4,
 
     /** @param {Creep} creep **/
     run: function(creep) {
-	    if(creep.carry.energy < creep.carryCapacity && creep.memory.harvest) {
-	        var sources = _.filter(this.findSource(creep.room), (source) => {
-	            return _.indexOf(creep.memory.blockSources, source.structureType) == -1
+        if(creep.carry.energy < creep.carryCapacity && creep.memory.harvest) {
+            var sources = _.filter(this.findSource(creep.room), (source) => {
+                return _.indexOf(creep.memory.blockSources, source.structureType) == -1
             });
-	        
-	        /* debug
-	        if(!_.isEmpty(creep.memory.blockSources)) {
-	            console.log('blocked sources:', creep.name, creep.memory.blockSources);
-	        }
-	        console.log('--', sources);
-	        _.forEach(sources, (source) => console.log(source.id, source.energy));
-	        */
-	        
-	        if (sources[0]) {
-                if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE 
-                || creep.pickup(sources[0]) == ERR_NOT_IN_RANGE 
+
+            /* debug
+            if(!_.isEmpty(creep.memory.blockSources)) {
+                console.log('blocked sources:', creep.name, creep.memory.blockSources);
+            }
+            console.log('--', sources);
+            _.forEach(sources, (source) => console.log(source.id, source.energy));
+            */
+
+            if (sources[0]) {
+                if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE
+                || creep.pickup(sources[0]) == ERR_NOT_IN_RANGE
                 || creep.withdraw(sources[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
                     creep.moveTo(sources[0].pos);
                 }
@@ -49,14 +49,14 @@ var roleHarvester = {
                     creep.memory.blockSources = [];
                 }
             } else {
-                var container = creep.room.find(FIND_STRUCTURES, { 
-	                filter: (structure) => structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] < structure.storeCapacity
-	            });
-	            
-	            if (container) {
-	                var transfer = creep.transfer(container[0], RESOURCE_ENERGY);
-	                if(transfer == ERR_NOT_IN_RANGE) {
-	                    creep.sayDelay('container', 2);
+                var container = creep.room.find(FIND_STRUCTURES, {
+                    filter: (structure) => structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] < structure.storeCapacity
+                });
+
+                if (container) {
+                    var transfer = creep.transfer(container[0], RESOURCE_ENERGY);
+                    if(transfer == ERR_NOT_IN_RANGE) {
+                        creep.sayDelay('container', 2);
                         creep.moveTo(container[0]);
                     }
                     if(transfer == OK) {
@@ -65,30 +65,30 @@ var roleHarvester = {
                         }
                         creep.memory.blockSources.push(STRUCTURE_CONTAINER);
                     }
-	            } else {
-    	            creep.moveTo(20, 15);
+                } else {
+                    creep.moveTo(20, 15);
                     creep.sayDelay('idle', 5);
                     creep.memory.blockSources = [];
-	            }
+                }
             }
         }
         if (creep.carry.energy == 0 && !creep.memory.harvest) {
             creep.memory.harvest = true;
             creep.say('go harvest!');
         }
-	},
-	
-	/** @param {Room} room **/
-	findSource: function(room) {
-	    return _.sortByOrder(
-	        room.find(FIND_DROPPED_ENERGY).concat(
-	            room.find(FIND_DROPPED_RESOURCES),
-	            room.find(FIND_STRUCTURES, { filter: (structure) => 
-	                structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] > 0
-	            }),
-	            room.find(FIND_SOURCES, { filter: (source) => source.energy > 0 })
+    },
+
+    /** @param {Room} room **/
+    findSource: function(room) {
+        return _.sortByOrder(
+            room.find(FIND_DROPPED_ENERGY).concat(
+                room.find(FIND_DROPPED_RESOURCES),
+                room.find(FIND_STRUCTURES, { filter: (structure) =>
+                    structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] > 0
+                }),
+                room.find(FIND_SOURCES, { filter: (source) => source.energy > 0 })
             ), (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
-	}
+    }
 };
 
 module.exports = roleHarvester;

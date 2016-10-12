@@ -14,14 +14,14 @@ var alert = _.template(
 );
 
 module.exports = {
-    
+
     types: {
         success: 'success',
         info: 'info',
         warning: 'warning',
         danger: 'danger'
     },
-    
+
     log: function(type, message, title) {
         if (undefined == message) {
             message = 'You don\'t log a message, dumass';
@@ -34,7 +34,7 @@ module.exports = {
         }
         console.log(alert({type: type, title: title, message: message}));
     },
-    
+
     logSuccess: function(message, title) {
         console.log('.', this);
         this.log(this.types.success, title, message);
@@ -49,30 +49,30 @@ module.exports = {
     logError: function(message, title) {
         this.log(this.types.danger, title, message);
     },
-    
+
     register: function() {
-        
+
         if (!console.success) {
             console.success = this.logSuccess;
             console.log(console.success);
             console.log('->', console);
             console.success('test');
         }
-        
+
         if (!console.info) {
             console.info = this.logInfo;
             console.log(console);
         }
-        
+
         if (!console.warn) {
             console.warn = this.logWarn;
             console.log(console);
         }
-        
+
         if (!console.error) {
             console.error = this.logError;
         }
-        
+
         console.log(console);
     }
 };

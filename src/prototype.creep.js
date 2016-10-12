@@ -1,6 +1,6 @@
 var roleRecycler = require('role.recycle');
 
-var style = 
+var style =
     '<style>'+
         '.panel, .panel-body, div.progress { padding-top: 0; padding-bottom: 1px; margin-bottom: 0; color: black;}'+
         '.panel, .debug { border: 1px solid red; }'+
@@ -31,8 +31,8 @@ Creep.prototype.sayDelay = function(text, ticks) {
     Game.time % ticks == 0 ? this.say(text) : '';
 }
 
-Creep.prototype.getRole = function() { 
-    return this.memory.role 
+Creep.prototype.getRole = function() {
+    return this.memory.role
 }
 
 Creep.prototype.setRole = function(role) {
@@ -47,12 +47,12 @@ Creep.prototype.recycle = function() {
 }
 
 Creep.prototype.info = function() {
-    
+
     var tmplTitle = _.template('Creep ${ name } [id:${ id }]');
     var targetTicksToLive = 1500;
     console.log(
         tmplPanel({
-            type: 'info', 
+            type: 'info',
             title: tmplTitle(this),
             message: tmplProgress({value: Math.floor(this.ticksToLive / (targetTicksToLive/100)), min:0, max: 100})
         })
