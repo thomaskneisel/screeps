@@ -60,7 +60,7 @@ var roleInvader = {
 
         var flags = _(Game.flags).filter((flag) => flag.name.substring(7) == creep.memory.roomToInvade);
 
-        console.log('Flags:', flags ? falgs : false);
+        console.log('Flags:', flags ? flags : false);
 
         if (creep.memory.roomToInvade == 'W52S61' && !creep.memory.atFlag) {
             var flag = Game.flags['routeToW52S61'];
