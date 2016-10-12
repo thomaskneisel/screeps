@@ -85,7 +85,6 @@ var roleHarvester = {
     findSource: function(room) {
         return _.sortByOrder(
             room.find(FIND_DROPPED_ENERGY).concat(
-                room.find(FIND_DROPPED_RESOURCES),
                 room.find(FIND_STRUCTURES, { filter: (structure) =>
                     structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] > 0
                 }),

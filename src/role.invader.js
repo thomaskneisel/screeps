@@ -43,7 +43,7 @@ var roleInvader = {
     },
 
     toResource: function(creep) {
-        var source = this.findSource(creep.room);
+        var source = this.findSources(creep.room);
         if (source) {
             if (creep.harvest(source[0]) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(source[0]);
@@ -124,7 +124,7 @@ var roleInvader = {
     },
 
     /** @param {Room} room **/
-    findSource: function(room) {
+    findSources: function(room) {
         return _.sortByOrder(
             room.find(FIND_DROPPED_ENERGY).concat(
                 room.find(FIND_SOURCES),
