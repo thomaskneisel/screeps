@@ -17,7 +17,7 @@ var roleRecycle = {
                 toMove = true;
             } else if(recycled == OK) {
                 console.log(creep.name, name, Memory.creeps[name]);
-                delete Memory.creeps[name];
+                //delete Memory.creeps[name];
             }
         }
 
