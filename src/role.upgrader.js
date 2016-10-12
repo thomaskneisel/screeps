@@ -24,7 +24,7 @@ var roleUpgrader = {
                 creep.moveTo(sources[0]);
             }
         }
-    }
+    },
 
     /** @param {Room} room **/
     findSources: function(room) {
