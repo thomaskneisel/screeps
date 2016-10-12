@@ -18,7 +18,7 @@ module.exports.loop = function () {
         console.log('Notified me ;) -> ',
             Game.notify(
                 'Homebase is out of energy',
-                1  // group these notifications for 1 minute
+                5  // group these notifications for 1 minute
         ));
     }
 
