@@ -81,9 +81,8 @@ var roleSpawn = {
             var build = devBuilds[cr];
             var elements = creeps[build.memory.role] || [];
 
-
             if (elements.length == undefined) {
-                Game.notify('YOU HAVE A PROBLEM HERE!! [elements.length == undefined]', 20);
+                Game.notify('YOU HAVE A PROBLEM HERE!! [elements.length == undefined]');
             }
             if (elements.length < build.count) {
                 if (this.create(cr) == OK) {
@@ -143,8 +142,7 @@ var roleSpawn = {
 
             console.log('created:' + result);
         } else {
-
-            console.log('can\'t create, check values!', result, '<a href="#!/room/' + spawn.room.name + '">' + spawn.room.name + '</a>');
+            console.log('can\'t create, check values!', result);
             /*
             console.log('body: ', body);
             console.log('name: ' + name);
@@ -153,7 +151,7 @@ var roleSpawn = {
             result = ERR_INVALID_ARGS;
         }
 
-        console.log('---');
+        //console.log('---');
 
         return result;
     },
