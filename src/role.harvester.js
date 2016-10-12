@@ -28,6 +28,9 @@ var roleHarvester = {
                 creep.sayDelay('noSources', 5);
                 creep.memory.blockSources = [];
                 creep.memory.harvest = false;
+
+                var msg = '<div style="color:red;">NoSources left</div>room['+creep.room.name+'] <br> creep['creep.name'] time['+Game.time+']';
+                Game.notify(msg);
             }
         }
         else {

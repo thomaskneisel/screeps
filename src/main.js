@@ -13,6 +13,15 @@ var checkEveryTick = 5;
 globalSpawn = roleSpawn;
 
 module.exports.loop = function () {
+
+    if(Game.spawns['Homebase']energy == 0) {
+        console.log('Notified me ;) -> ',
+            Game.notify(
+                'Homebase is out of energy',
+                1  // group these notifications for 1 minute
+        ));
+    }
+
     var tower = Game.getObjectById('57fc14fdba828cf03db240c3');
     if(tower) {
         var closestDamagedStructure = tower.pos.findClosestByRange(FIND_STRUCTURES, {
