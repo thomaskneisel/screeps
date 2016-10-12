@@ -1,6 +1,6 @@
 var roleInvader = {
     
-    count: 8,
+    count: 4,
     
     rooms:  [
         'W51S62',
@@ -9,16 +9,23 @@ var roleInvader = {
     
     /** @param {Creep} creep **/
     run: function(creep) {
-        
-        if(creep.carry.energy < creep.carryCapacity) {
-            if (creep.memory.roomToInvade == creep.room.name) {
-                this.ensureBuilder(creep, 1);
-                this.toResource(creep);
-            } else {
-                this.toRoom(creep);
+
+        var closestHostile = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
+        if(closestHostile) {
+            if(creep.attack(closestHostile) ==ERR_NOT_IN_RANGE) {
+                creep.moveTo(closestHostile);
             }
         } else {
-            this.backHome(creep);
+            if(creep.carry.energy < creep.carryCapacity) {
+                if (creep.memory.roomToInvade == creep.room.name) {
+                    this.ensureBuilder(creep, 1);
+                    this.toResource(creep);
+                } else {
+                    this.toRoom(creep);
+                }
+            } else {
+                this.backHome(creep);
+            }
         }
 	},
 	

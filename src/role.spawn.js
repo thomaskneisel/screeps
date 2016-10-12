@@ -32,7 +32,8 @@ var devCreeps = {
     
     //invader: [CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK] //550
     //invader: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK] //700
-    invader: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK] //800
+    //invader: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK] //800
+    invader: [CARRY, CARRY, ATTACK, TOUGH, TOUGH, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK] //800
 }
 
 var devBuilds = {
@@ -103,7 +104,7 @@ var roleSpawn = {
                 build.memory.costs = costs;
             }
         
-            //console.log(build.name, _.size(elements), '-', build.costs, build.body);
+            console.log(build.name, _.size(elements), '-', build.costs, build.body);
         }
     },
     
