@@ -58,10 +58,9 @@ var roleInvader = {
     toRoom: function(creep) {
         creep.sayDelay('toRoom', 2);
 
+        var flags = _(Game.flags).filter((flag) => flag.name.substring(7) == creep.memory.roomToInvade);
 
-        console.log(
-            _(Game.flags).filter((flag) => console.log(flag.name.substring(7) == creep.memory.roomToInvade))
-        );
+        console.log('Flags:', flags ? falgs : false);
 
         if (creep.memory.roomToInvade == 'W52S61' && !creep.memory.atFlag) {
             var flag = Game.flags['routeToW52S61'];
