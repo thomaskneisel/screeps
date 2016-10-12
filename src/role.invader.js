@@ -10,13 +10,14 @@ var roleInvader = {
     /** @param {Creep} creep **/
     run: function(creep) {
 
+        var chicken = creep.hits < creep.hitsMax/2;
         var closestHostile = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
-        if(closestHostile && creep.hits > creep.maxHits/2) {
+        if(closestHostile && !chicken) {
             if(creep.attack(closestHostile) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(closestHostile);
             }
         } else {
-            if(creep.carry.energy < creep.carryCapacity && creep.hits > creep.maxHits/2) {
+            if(creep.carry.energy < creep.carryCapacity && !chicken) {
                 if (creep.memory.roomToInvade == creep.room.name) {
                     this.ensureBuilder(creep, 1);
                     this.toResource(creep);
