@@ -14,15 +14,12 @@ globalSpawn = roleSpawn;
 
 module.exports.loop = function () {
 
-    if(Game.spawns['Homebase'].energy == 0) {
-        console.log(
-            'Notified me ;) -> ',
-            Game.notify(
-                'Homebase is out of energy',
-                5  // group these notifications for 1 minute
-            ),
-            Game.notify('Some other message', 5)
-        );
+    if (0 == Game.time % checkEveryTick) {
+        roleSpawn.check();
+    }
+
+    if (0 == Game.time % checkEveryTick * 2) {
+        roleRecycler.cleanMemory();
     }
 
     var tower = Game.getObjectById('57fc14fdba828cf03db240c3');
@@ -73,8 +70,5 @@ module.exports.loop = function () {
         }
     }
 
-    if (0 == Game.time % checkEveryTick) {
-        roleSpawn.check();
-        roleRecycler.cleanMemory();
-    }
+
 }
