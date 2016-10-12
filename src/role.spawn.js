@@ -104,7 +104,7 @@ var roleSpawn = {
                 build.memory.costs = costs;
             }
         
-            console.log(build.name, _.size(elements), '-', build.costs, build.body);
+            //console.log(build.name, _.size(elements), '-', build.costs, build.body);
         }
     },
     
