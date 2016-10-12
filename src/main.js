@@ -8,7 +8,7 @@ var roleRecycler = require('role.recycle');
 var roleInvader = require('role.invader');
 var roleSpawn = require('role.spawn');
 
-var rolePlay = require('role/roleplay');
+var rolePlay = require('role\\roleplay');
 
 var checkEveryTick = 10;
 
