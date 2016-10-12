@@ -202,7 +202,7 @@ var roleSpawn = {
                     '</table>'+ 
                     progress({value: creep.ticksToLive, percent: percent, min:0, max: targetTicksToLive})})
         );
-        
+
         //console.log('<span style="background-color: blue;" class="btn">renew</span>:', creepLink(creep), ' - ticks:', creep.ticksToLive, ' - targetTicks:', targetTicksToLive);
         
         var renewd = spawn.renewCreep(creep);
