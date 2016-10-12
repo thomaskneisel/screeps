@@ -1,6 +1,6 @@
 var roleInvader = {
     
-    count: 4,
+    count: 8,
     
     rooms:  [
         'W51S62',
