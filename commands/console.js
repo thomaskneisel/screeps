@@ -5,9 +5,9 @@ renewLowest = function() {
 }
 
 /**
- * fetch a creep, spawn, room, controller
+ * fetch a creep, spawn, room
  * @param {string} name
  */
 get = function(name) {
-    return Game.creep[name] || Game.spawn[name]
+    return Game.creeps[name] || Game.spawns[name] || Game.rooms[name];
 }

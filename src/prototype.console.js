@@ -76,3 +76,11 @@ module.exports = {
         console.log(console);
     }
 };
+
+/**
+ * fetch a creep, spawn, room
+ * @param {string} name
+ */
+get = function(name) {
+    return Game.creeps[name] || Game.spawns[name] || Game.rooms[name];
+}
