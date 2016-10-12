@@ -8,15 +8,11 @@ var roleRecycler = require('role.recycle');
 var roleInvader = require('role.invader');
 var roleSpawn = require('role.spawn');
 
-var rolePlay = require('role\\roleplay');
-
 var checkEveryTick = 10;
 
 globalSpawn = roleSpawn;
 
 module.exports.loop = function () {
-
-    rolePlay.run();
 
     if(Game.spawns['Homebase'].energy == 0) {
         console.log(
