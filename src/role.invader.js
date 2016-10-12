@@ -68,6 +68,7 @@ var roleInvader = {
                 creep.say('da bin ich');
             } else {
                 var moved = creep.moveByPath(creep.memory.path);
+
                 if(moved == ERR_NOT_FOUND || moved == ERR_INVALID_ARGS) {
                     creep.memory.path = creep.pos.findPathTo(flag);
                     creep.say('newPath');
