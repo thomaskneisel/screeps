@@ -41,7 +41,7 @@ var devBuilds = {
        name: 'Harvester',
        body: devCreeps.harvester,
        memory: { role: 'harvester', origin: 'harvester' },
-       count: 3
+       count: 4
    },
    upgrader: {
        name: 'Upgrader',
