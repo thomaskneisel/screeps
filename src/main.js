@@ -14,7 +14,7 @@ globalSpawn = roleSpawn;
 
 module.exports.loop = function () {
 
-    if(Game.spawns['Homebase']energy == 0) {
+    if(Game.spawns['Homebase'].energy == 0) {
         console.log('Notified me ;) -> ',
             Game.notify(
                 'Homebase is out of energy',
