@@ -8,8 +8,8 @@ var logger = require('./../src/data.logger.logger');
 var loggerMock = {};
 
 describe('Logger', function() {
-    it('should exists and be a object', () =>
-        expect(logger).exits;
+    it('should exists and be a object', () => {
+        expect(logger).exist;
         expect(logger).to.be.an('object');
-    );
+    });
 });
