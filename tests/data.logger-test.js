@@ -14,7 +14,6 @@ describe('DataLogger', function() {
             warnOnReplace: false,
             warnOnUnregistered: false
         });
-        console.log('\tStart Test Suite');
     });
 
     beforeEach(function() {
@@ -71,8 +70,6 @@ describe('DataLogger', function() {
 
     // afterEach(() => console.log('End test'));
     after(() => {
-
         mockery.disable();
-        console.log('End Test Suite');
-    });
+   });
 });

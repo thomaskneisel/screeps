@@ -1,4 +1,4 @@
-var roleUpgrader = {
+module.exports = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
@@ -35,5 +35,3 @@ var roleUpgrader = {
             (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
     }
 };
-
-module.exports = roleUpgrader;

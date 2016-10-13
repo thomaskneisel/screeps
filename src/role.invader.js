@@ -1,4 +1,4 @@
-var roleInvader = {
+module.exports = {
 
     count: 6,
 
@@ -134,5 +134,3 @@ var roleInvader = {
             ), (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
     }
 };
-
-module.exports = roleInvader;

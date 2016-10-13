@@ -63,7 +63,7 @@ var devBuilds = {
    }
 }
 
-var roleSpawn = {
+module.exports = {
 
     check: function() {
         var creeps = _.groupBy(Game.creeps, (creep) => creep.memory.origin)
@@ -219,7 +219,7 @@ var roleSpawn = {
             }
         }
 
-        if (creep.memory.renew.costs > creep.memory.costs) {
+        if (creep.memory.renew.costs > creep.memory.costs * 2) {
             console.log(panel({
                 type: 'warning',
                 title: 'Recycle ' + creep.name,
@@ -276,5 +276,3 @@ var roleSpawn = {
             .values();
     }
 }
-
-module.exports = roleSpawn;

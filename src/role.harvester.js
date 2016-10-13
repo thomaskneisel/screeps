@@ -1,4 +1,4 @@
-var roleHarvester = {
+module.exports = {
 
     count: 4,
 
@@ -92,5 +92,3 @@ var roleHarvester = {
             ), (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
     }
 };
-
-module.exports = roleHarvester;

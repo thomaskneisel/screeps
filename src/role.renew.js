@@ -2,7 +2,7 @@ var roleRecycle = require('role.recycle')
 var roleHarvester = require('role.harvester')
 var roleInvader = require('role.invader')
 
-var roleRenew = {
+module.exports = {
 
     /** @param {Creep} creep
      *  @param {Integer} ticksToLive
@@ -115,5 +115,3 @@ var roleRenew = {
             .values();
     }
 }
-
-module.exports = roleRenew;

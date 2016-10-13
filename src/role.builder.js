@@ -1,4 +1,4 @@
-var roleBuilder = {
+module.exports = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
@@ -55,5 +55,3 @@ var roleBuilder = {
             (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
     }
 };
-
-module.exports = roleBuilder;

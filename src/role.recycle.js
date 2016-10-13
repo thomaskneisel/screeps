@@ -1,4 +1,4 @@
-var roleRecycle = {
+module.exports = {
 
     /** @param {Creep} creep **/
     /** @param {Spawn} spawn **/
@@ -65,5 +65,3 @@ var roleRecycle = {
         this.cleanMemory();
     }
 };
-
-module.exports = roleRecycle;

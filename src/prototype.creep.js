@@ -58,7 +58,3 @@ Creep.prototype.info = function() {
         })
     );
 }
-
-module.exports = {
-
-};
