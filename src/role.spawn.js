@@ -201,7 +201,8 @@ var roleSpawn = {
                         '<tr><td><strong>Ticks</strong></td><td>' + creep.ticksToLive + '</td></tr>'+
                         '<tr><td><strong>TargetTicks</strong></td><td>' + targetTicksToLive + '</td></tr>'+
                     '</table>'+
-                    progress({value: creep.ticksToLive, percent: percent, min:0, max: targetTicksToLive})})
+                    progress({value: creep.ticksToLive, percent: percent, min:0, max: targetTicksToLive})
+            })
         );
 
         //console.log('<span style="background-color: blue;" class="btn">renew</span>:', creepLink(creep), ' - ticks:', creep.ticksToLive, ' - targetTicks:', targetTicksToLive);
@@ -219,6 +220,13 @@ var roleSpawn = {
         }
 
         if (creep.memory.renew.costs > creep.memory.costs) {
+            console.log(panel({
+                type: 'warning',
+                title: 'Recycle ' + creep.name,
+                message: 'Recycle creep insteed of renew!' +
+                '<br>creep.memory.renew.costs: ' + creep.memory.renew.costs +
+                '<br>creep.memory.costs: ' + creep.memory.costs
+            }));
             creep.memory.role = 'recycle';
             return false;
         }

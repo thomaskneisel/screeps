@@ -5,7 +5,9 @@
   "dependencies": {
     "screepsAutocomplete": "git+https://github.com/thomaskneisel/ScreepsAutocomplete.git#nodeify"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

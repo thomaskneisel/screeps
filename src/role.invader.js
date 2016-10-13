@@ -43,6 +43,7 @@ var roleInvader = {
     },
 
     toResource: function(creep) {
+        creep.memory.atFlag = false;
         var source = this.findSources(creep.room);
         if (source) {
             if (creep.harvest(source[0]) == ERR_NOT_IN_RANGE) {
@@ -86,7 +87,7 @@ var roleInvader = {
 
                 if (!creep.memory.path) {
                     creep.memory.path = creep.pos.findPathTo(flag);
-                    console.log('WehtehÃÂ¤ff?!');
+                    console.log('Wehte?!');
                 }
             }
         } else {
@@ -128,7 +129,7 @@ var roleInvader = {
         return _.sortByOrder(
             room.find(FIND_STRUCTURES, { filter: (structure) =>
                 structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] > 0
-            })._.concat(
+            }).concat(
                 room.find(FIND_SOURCES, { filter: (source) => source.energy > 0 })
             ), (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
     }
