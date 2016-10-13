@@ -8,13 +8,7 @@ var dataLogger = {
         error: 0
     },
 
-    loggers: [
-        {
-            log: function(type, message) {
-                console.log(message)
-            }
-        }
-    ],
+    loggers: [],
 
     /**
      * @param {string} type - message type

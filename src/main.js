@@ -11,6 +11,7 @@ var roleSpawn = require('role.spawn');
 var checkEveryTick = 10;
 
 globalSpawn = roleSpawn;
+logger = require('data.logger');
 
 module.exports.loop = function () {
 
