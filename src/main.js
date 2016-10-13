@@ -12,14 +12,22 @@ var checkEveryTick = 10;
 
 globalSpawn = roleSpawn;
 logger = require('data.logger');
+var Logger = require('data.logger.logger');
+
+logger.loggers.push(require('data.logger.email'));
+logger.loggers.push(new Logger(console.log));
+
+logger.success('Init');
 
 module.exports.loop = function () {
 
     if (0 == Game.time % checkEveryTick) {
+        logger.info('Spawn check');
         roleSpawn.check();
     }
 
     if (0 == Game.time % checkEveryTick * 2) {
+        logger.info('Clean memory');
         roleRecycler.cleanMemory();
     }
 
