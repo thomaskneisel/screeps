@@ -126,10 +126,11 @@ var roleInvader = {
     /** @param {Room} room **/
     findSources: function(room) {
         return _.sortByOrder(
-            room.find(FIND_DROPPED_ENERGY).concat(
-                room.find(FIND_SOURCES),
-                room.find(FIND_DROPPED_RESOURCES)
-            ), 'energy', 'asc');
+            room.find(FIND_STRUCTURES, { filter: (structure) =>
+                structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] > 0
+            })._.concat(
+                room.find(FIND_SOURCES, { filter: (source) => source.energy > 0 })
+            ), (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
     }
 };
 

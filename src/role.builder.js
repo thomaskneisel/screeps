@@ -29,8 +29,12 @@ var roleBuilder = {
                     }
                 } else {
                     creep.moveTo(31, 19);
-                    creep.say('i->upgrader');
-                    creep.memory.role = 'upgrader';
+                    if (creep.room.controller.my) {
+                        creep.say('i->upgrader');
+                        creep.memory.role = 'upgrader';
+                    } else {
+                        creep.sayDelay('idle', 3);
+                    }
                 }
             }
         }
