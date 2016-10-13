@@ -1,11 +1,11 @@
 var dataLogger = {
 
     logTypes: {
-        debug: -1,
-        success: 0,
-        info: 1,
-        warn: 2,
-        error: 3
+        debug: 0,
+        success: 10,
+        info: 30,
+        warn: 1,
+        error: 0
     },
 
     loggers: [
@@ -21,7 +21,7 @@ var dataLogger = {
      * @param {string} message - message text
      */
     log: function(type, message) {
-        _(this.loggers).forEach((logger) => logger.log(type, message))
+        this.loggers.forEach((logger) => logger.log(type, message));
     },
 
     /**

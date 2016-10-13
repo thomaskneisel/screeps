@@ -1,5 +1,4 @@
 _ = require('lodash'); // "Game" Situation
-var mockery = require('mockery');
 var chai = require('chai');
 var expect = chai.expect;
 
