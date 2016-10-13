@@ -28,6 +28,5 @@ describe('EmailLogger', function() {
     it('should call Game.notify method with message and type as groupIntervall', () => {
         emailLogger.log('unit', 'test');
         expect(Game.called).is.ok;
-        //expect(false).is.ok;
     });
 });
