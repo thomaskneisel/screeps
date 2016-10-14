@@ -105,7 +105,7 @@ module.exports = {
         creep.memory.atFlag = false;
         var home = Game.spawns[_.findKey(Game.spawns)];
         var container = home.room.find(FIND_STRUCTURES, {
-            filter: (structure) => structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] < structure.storeCapacity
+            filter: (structure) => (structure.structureType == STRUCTURE_CONTAINER || structure.structureType == STRUCTURE_STORAGE) && structure.store[RESOURCE_ENERGY] < structure.storeCapacity
         });
 
         if(container[0]) {
