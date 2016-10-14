@@ -66,7 +66,7 @@ module.exports = {
                         if (creep.memory.blockSources == undefined) {
                             creep.memory.blockSources = [];
                         }
-                        creep.memory.blockSources.push(STRUCTURE_CONTAINER);
+                        creep.memory.blockSources.push(container[0].structureType);
                     }
                 } else {
                     creep.moveTo(20, 15);
