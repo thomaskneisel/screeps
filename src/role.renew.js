@@ -1,6 +1,4 @@
 var roleRecycle = require('role.recycle')
-var roleHarvester = require('role.harvester')
-var roleInvader = require('role.invader')
 
 module.exports = {
 
@@ -8,7 +6,7 @@ module.exports = {
      *  @param {Integer} ticksToLive
      *  @param {Spawn} spawn
      */
-    run: function(creep, targetTicksToLive, spawn) {
+    renew: function(creep, targetTicksToLive, spawn) {
         creep.memory.role = 'renew';
         if (spawn == undefined) {
            spawn = Game.spawns[_.findKey(Game.spawns)];
@@ -49,13 +47,9 @@ module.exports = {
                         '<tr><td><strong>Ticks</strong></td><td>' + creep.ticksToLive + '</td></tr>'+
                         '<tr><td><strong>TargetTicks</strong></td><td>' + targetTicksToLive + '</td></tr>'+
                     '</table>'+
-                    progress({value: creep.ticksToLive, percent: percent, min:0, max: targetTicksToLive})})
+                    progress({value: creep.ticksToLive, percent: percent, min:0, max: targetTicksToLive})
+            })
         );
-
-        //console.log('<span style="background-color: blue;" class="btn">renew</span>:', creepLink(creep), ' - ticks:', creep.ticksToLive, ' - targetTicks:', targetTicksToLive);
-
-        var renewd = spawn.renewCreep(creep);
-        var unload = creep.transfer(spawn, RESOURCE_ENERGY);
 
         if (!creep.memory.renew) {
             creep.memory.renew = {
@@ -63,14 +57,26 @@ module.exports = {
                 hits: creep.memory.renewHits || 0,
                 costs: creep.memory.renewCosts || 0,
                 average: [
-                    creep.memory.costs / CREEP_LIFE_TIME
+                    creep.memory.costs / CREEP_LIFE_TIME,
+                    0
                 ]
             }
-            var renew = creep.memory.renew;
-            renew.average.push( renew.costs / renew.hits);
-
-            console.log(creep.memory.renew.average);
         }
+
+        if (creep.memory.renew.costs > creep.memory.costs * 2) {
+            console.log(panel({
+                type: 'warning',
+                title: 'Recycle ' + creep.name,
+                message: 'Recycle creep insteed of renew!' +
+                '<br>creep.memory.renew.costs: ' + creep.memory.renew.costs +
+                '<br>creep.memory.costs: ' + creep.memory.costs
+            }));
+            creep.memory.role = 'recycle';
+            return false;
+        }
+
+        var renewd = spawn.renewCreep(creep);
+        var unload = creep.transfer(spawn, RESOURCE_ENERGY);
 
         if (renewd == ERR_NOT_IN_RANGE) {
             creep.sayDelay('renewing', 5);
@@ -84,8 +90,7 @@ module.exports = {
             creep.memory.renew.costs += renewCosts;
             creep.memory.renew.hits += renewHits;
 
-            creep.memory.renew.average.push(renewCosts / renewHits);
-
+            creep.memory.renew.average[1] = renewCosts / renewHits;
             if (creep.ticksToLive > targetTicksToLive || creep.ticksToLive > targetTicksToLive) {
                 creep.memory.renew.count++;
                 creep.memory.role = creep.memory.origin;
@@ -96,22 +101,5 @@ module.exports = {
         }
 
         roleRecycle.cleanMemory();
-    },
-
-    /** @param {String} role **/
-    ping: function(role) {
-        _.chain(Game.creeps)
-            .filter((creep) => role == undefined || creep.memory.role == role)
-            .map((creep) => {
-                creep.say(creep.memory.role)
-            }).value();
-    },
-
-    /** @param {String} role **/
-    /** @param {Bool} origin **/
-    getCreeps: function(role, origin) {
-        return _.chain(Game.creeps)
-            .filter((creep) => role == undefined || (origin && creep.memory.origin == role) || (!origin && creep.memory.role == role))
-            .values();
     }
 }

@@ -15,6 +15,13 @@ Game = {
 }
 
 describe('EmailLogger', function() {
+     before(() => {
+        mockery.enable({
+            warnOnReplace: false,
+            warnOnUnregistered: false
+        });
+    });
+
     it('should exists and be a object', () => {
         expect(emailLogger).exist;
         expect(emailLogger).be.an('object');
@@ -28,5 +35,9 @@ describe('EmailLogger', function() {
     it('should call Game.notify method with message and type as groupIntervall', () => {
         emailLogger.log('unit', 'test');
         expect(Game.called).is.ok;
+    });
+
+    after(() => {
+        mockery.disable();
     });
 });

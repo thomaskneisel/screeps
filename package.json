@@ -8,7 +8,8 @@
     "lodash": "^4.16.4",
     "mocha": "^3.1.2",
     "mockery": "^2.0.0",
-    "screepsAutocomplete": "git+https://github.com/thomaskneisel/ScreepsAutocomplete.git"
+    "screepsAutocomplete": "git+https://github.com/thomaskneisel/ScreepsAutocomplete.git",
+    "sinon": "^1.17.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

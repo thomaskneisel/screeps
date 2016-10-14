@@ -5,6 +5,7 @@ var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
 var roleBuilder = require('role.builder');
 var roleRecycler = require('role.recycle');
+var roleRenew = require('role.renew');
 var roleInvader = require('role.invader');
 var roleSpawn = require('role.spawn');
 
@@ -59,8 +60,8 @@ module.exports.loop = function () {
         if (creep.ticksToLive < 20) {
             creep.memory.role = 'recycle';
         }
-        if(creep.memory.role == 'renew' || creep.ticksToLive < 400) {
-            roleSpawn.renew(creep, 1200);
+        if(creep.memory.role == 'renew' || (creep.ticksToLive < 400 && creep.memory.role != 'harvester')) {
+            roleRenew.renew(creep, 1200);
         }
         if(creep.memory.role == 'harvester') {
             roleHarvester.run(creep);
