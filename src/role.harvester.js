@@ -53,13 +53,13 @@ module.exports = {
                 }
             } else {
                 var container = creep.room.find(FIND_STRUCTURES, {
-                    filter: (structure) => structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] < structure.storeCapacity
+                    filter: (structure) => (structure.structureType == STRUCTURE_CONTAINER || structure.structureType == STRUCTURE_STORAGE) && structure.store[RESOURCE_ENERGY] < structure.storeCapacity
                 });
 
                 if (container) {
                     var transfer = creep.transfer(container[0], RESOURCE_ENERGY);
                     if(transfer == ERR_NOT_IN_RANGE) {
-                        creep.sayDelay('container', 2);
+                        creep.sayDelay('storage', 2);
                         creep.moveTo(container[0]);
                     }
                     if(transfer == OK) {
@@ -85,10 +85,10 @@ module.exports = {
     findSource: function(room) {
         return _.sortByOrder(
             room.find(FIND_DROPPED_ENERGY).concat(
+                room.find(FIND_SOURCES, { filter: (source) => source.energy > 0 }),
                 room.find(FIND_STRUCTURES, { filter: (structure) =>
-                    structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] > 0
-                }),
-                room.find(FIND_SOURCES, { filter: (source) => source.energy > 0 })
-            ), (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
+                    (structure.structureType == STRUCTURE_CONTAINER || structure.structureType == STRUCTURE_STORAGE) && structure.store[RESOURCE_ENERGY] > 0
+                })
+            ), (source) => !source ? 0 : source.energy || source.store[RESOURCE_ENERGY], 'asc');
     }
 };
