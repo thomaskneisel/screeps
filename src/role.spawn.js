@@ -48,19 +48,19 @@ var devBuilds = {
        name: 'Upgrader',
        body: devCreeps.upgrader,
        memory: { role: 'upgrader', origin: 'upgrader' },
-       count: 0
+       count: 1
    },
    builder: {
        name: 'Builder',
        body: devCreeps.builder,
        memory: { role: 'builder', origin: 'builder' },
-       count: 0
+       count: 1
    },
    invader: {
        name: 'Invader',
        body: devCreeps.invader,
        memory: { role: 'invader', origin: 'invader', roomToInvade: roleInvader.rooms[_.random(0, roleInvader.rooms.length - 1)] },
-       count: 0 //roleInvader.count
+       count: 2 //roleInvader.count
    }
 }
 
@@ -87,7 +87,7 @@ module.exports = {
             }
             if (elements.length < build.count) {
                 if (this.create(cr) == OK) {
-                    console.log(styles, '<span class="ok btn btn-xs">OK</span>', build.name, elements.length, 'of', build.count);
+                    console.log(styles, '<span class="ok btn btn-xs">CREATED</span>', build.name, elements.length, 'of', build.count);
                 } else {
                     console.log(styles, '<span class="build btn-xs">CAN NOT CREATE</span>', build.name, elements.length, 'of', build.count);
                 }
