@@ -30,8 +30,8 @@ module.exports = {
     findSources: function(room) {
         return _.sortByOrder(
             room.find(FIND_STRUCTURES, { filter: (structure) =>
-                    structure.structureType == STRUCTURE_CONTAINER && structure.store[RESOURCE_ENERGY] > 0
+                (structure.structureType == STRUCTURE_CONTAINER || structure.structureType == STRUCTURE_STORAGE) && structure.store[RESOURCE_ENERGY] > 0
             }).concat(room.find(FIND_SOURCES, { filter: (source) => source.energy > 0 })),
-            (source) => source.energy || source.store[RESOURCE_ENERGY], 'asc');
+            (source) => !source ? 0 : source.energy || source.store[RESOURCE_ENERGY], 'asc');
     }
 };
