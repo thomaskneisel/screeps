@@ -60,7 +60,7 @@ var devBuilds = {
        name: 'Invader',
        body: devCreeps.invader,
        memory: { role: 'invader', origin: 'invader', roomToInvade: roleInvader.rooms[_.random(0, roleInvader.rooms.length - 1)] },
-       count: 2 //roleInvader.count
+       count: roleInvader.count
    }
 }
 
