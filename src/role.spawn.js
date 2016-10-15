@@ -138,10 +138,11 @@ module.exports = {
             console.log(name,spawn.memory.count);
         }
         if (result == OK) {
-            result = spawn.createCreep(body, name, memory);
+            result
+            var creepName = spawn.createCreep(body, name, memory);
             spawn.memory.count++;
 
-            console.log('created:' + result);
+            console.log('created:' + creepName);
         } else {
             console.log('can\'t create, check values!', result);
             /*
