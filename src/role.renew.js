@@ -71,8 +71,8 @@ module.exports = {
                 '<br>creep.memory.renew.costs: ' + creep.memory.renew.costs +
                 '<br>creep.memory.costs: ' + creep.memory.costs
             }));
-            creep.memory.role = 'recycle';
-            return false;
+            //creep.memory.role = 'recycle';
+            //return false;
         }
 
         var renewd = spawn.renewCreep(creep);

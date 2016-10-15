@@ -4,6 +4,7 @@ var roleInvader = require('role.invader')
 
 var devCreeps = {
     base: [CARRY, MOVE, WORK, WORK], //300
+    //harvester: [CARRY, MOVE, WORK, WORK], //300
     //harvester: [CARRY, CARRY, MOVE, WORK, WORK], //350
     //harvester: [CARRY, CARRY, MOVE, MOVE, WORK, WORK], //400
     //harvester: [CARRY, CARRY, CARRY, MOVE, MOVE, WORK, WORK], //450
@@ -47,19 +48,19 @@ var devBuilds = {
        name: 'Upgrader',
        body: devCreeps.upgrader,
        memory: { role: 'upgrader', origin: 'upgrader' },
-       count: 1
+       count: 0
    },
    builder: {
        name: 'Builder',
        body: devCreeps.builder,
        memory: { role: 'builder', origin: 'builder' },
-       count: 1
+       count: 0
    },
    invader: {
        name: 'Invader',
        body: devCreeps.invader,
        memory: { role: 'invader', origin: 'invader', roomToInvade: roleInvader.rooms[_.random(0, roleInvader.rooms.length - 1)] },
-       count: roleInvader.count
+       count: 0 //roleInvader.count
    }
 }
 

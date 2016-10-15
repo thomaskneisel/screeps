@@ -10,7 +10,7 @@ module.exports = {
     /** @param {Creep} creep **/
     run: function(creep) {
 
-        var chicken = creep.hits < creep.hitsMax/2;
+        var chicken = false; //creep.hits < creep.hitsMax/2;
         var closestHostile = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
         if(closestHostile && !chicken) {
             if(creep.attack(closestHostile) == ERR_NOT_IN_RANGE) {
