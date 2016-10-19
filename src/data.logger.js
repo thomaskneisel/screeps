@@ -2,9 +2,9 @@ var dataLogger = {
 
     logTypes: {
         debug: 0,
-        success: 10,
-        info: 30,
-        warn: 1,
+        success: 120,
+        info: 240,
+        warn: 30,
         error: 0
     },
 
