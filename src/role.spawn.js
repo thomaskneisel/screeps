@@ -14,7 +14,8 @@ var devCreeps = {
     //harvester: [CARRY, CARRY, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK], //650
     //harvester: [CARRY, CARRY, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK], //700
     //harvester: [CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK], //800 Carry
-    harvester: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK], //800 MOVE
+    // harvester: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK], //800 MOVE
+    harvester: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK, WORK], //850 MOVE
 
     //upgrader: [CARRY, MOVE, MOVE, WORK, WORK], //350
     //upgrader: [CARRY, MOVE, MOVE, MOVE, WORK, WORK], //400
@@ -34,7 +35,8 @@ var devCreeps = {
     //invader: [CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK] //550
     //invader: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK] //700
     //invader: [CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, WORK, WORK, WORK, WORK] //800
-    invader: [TOUGH, TOUGH, CARRY, CARRY, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE, MOVE, ATTACK] //800
+    // invader: [TOUGH, TOUGH, CARRY, CARRY, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE, MOVE, ATTACK] //800
+    invader: [TOUGH, TOUGH, CARRY, CARRY, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE, MOVE, MOVE, ATTACK] //850
 }
 
 var devBuilds = {
@@ -48,7 +50,7 @@ var devBuilds = {
        name: 'Upgrader',
        body: devCreeps.upgrader,
        memory: { role: 'upgrader', origin: 'upgrader' },
-       count: 1
+       count: 2
    },
    builder: {
        name: 'Builder',
@@ -60,7 +62,7 @@ var devBuilds = {
        name: 'Invader',
        body: devCreeps.invader,
        memory: { role: 'invader', origin: 'invader', roomToInvade: roleInvader.rooms[_.random(0, roleInvader.rooms.length - 1)] },
-       count: roleInvader.count
+      count: roleInvader.count
    }
 }
 

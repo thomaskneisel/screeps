@@ -1,6 +1,6 @@
 module.exports = {
 
-    count: 6,
+    count: 8,
 
     rooms:  [
         'W51S62',

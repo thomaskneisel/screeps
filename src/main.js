@@ -35,7 +35,8 @@ module.exports.loop = function () {
     var tower = Game.getObjectById('57fc14fdba828cf03db240c3');
     if(tower) {
         var closestDamagedStructure = tower.pos.findClosestByRange(FIND_STRUCTURES, {
-            filter: (structure) => structure.hits < structure.hitsMax
+            filter: (structure) => structure.hits < structure.hitsMax && structure.structureType != STRUCTURE_WALL,
+            sort: (structureA, structureB) => structureA.structureType < structureB.structureType ? 1 : structureA.structureType < structureB.structureType ? -1 : 0
         });
         if(closestDamagedStructure && tower.energy > tower.energyCapacity / 1.25) {
             tower.repair(closestDamagedStructure);
